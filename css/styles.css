@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/water.jpg) no-repeat center center/cover;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.stopwatch-container{
+    background-color: #fff;
+    height: auto;
+    padding: 40px;
+    width: Clamp(200px, 40%, 800px);
+    border-radius: 35px;
+    flex-direction: column;
+    
+}
+
+div.time-container span{
+    font-size: 5rem;
+}
+
+
+#play-pause-btn, #reset-btn{
+   
+    transform: scale(.4);
+    margin: -25px;
+    transition: .5s;
+}
+
+:is(#play-pause-btn, #reset-btn):hover
+{
+    filter: brightness(90%);
+    transform: scale(.5);
+}
+
+:is(#play-pause-btn, #reset-btn):active
+{
+    transition: .1s;
+    transform: scale(.4);
+}
